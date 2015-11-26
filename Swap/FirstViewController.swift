@@ -11,6 +11,7 @@ import AVFoundation
 
 class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
+   asdfasdf
     @IBOutlet weak var qrCodeResult: UILabel!
     @IBOutlet weak var scanOutput: UILabel!
     

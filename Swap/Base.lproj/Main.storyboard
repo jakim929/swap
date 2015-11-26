@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -24,35 +24,20 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="JAMES JAMES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sly-n2-xff">
-                                <rect key="frame" x="84" y="162" width="480" height="112"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="287" id="A7O-C9-V5g"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7x1-Sc-Btp" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="29X-nh-sgB"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="7x1-Sc-Btp" secondAttribute="bottom" constant="60" id="JVX-B9-qkC"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="sly-n2-xff" secondAttribute="bottom" constant="277" id="Tbt-p5-Vm9"/>
                             <constraint firstItem="7x1-Sc-Btp" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="435" id="XKC-HQ-XRL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sly-n2-xff" secondAttribute="trailing" constant="129" id="XR5-Kp-WCh"/>
                             <constraint firstItem="7x1-Sc-Btp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="26" id="t7Y-03-awo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7x1-Sc-Btp" secondAttribute="trailing" constant="26" id="wgt-bD-R7X"/>
-                            <constraint firstItem="sly-n2-xff" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="142" id="wog-jq-4ca"/>
-                            <constraint firstItem="sly-n2-xff" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="164" id="y3u-b4-qlU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scan" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="qrCodeResult" destination="7x1-Sc-Btp" id="UHX-fQ-e6r"/>
-                        <outlet property="scanOutput" destination="sly-n2-xff" id="e1X-yx-RJ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>

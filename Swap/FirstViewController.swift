@@ -10,16 +10,17 @@ import UIKit
 import AVFoundation
 
 class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    
-   asdfasdf
+
     @IBOutlet weak var qrCodeResult: UILabel!
-    @IBOutlet weak var scanOutput: UILabel!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
     var jsonValue:String?
+    var contactDetail:[String : String]?
+    
+    let type = ["name", "facebook", "snapchat", "email", "phone"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +32,6 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         
         // Bring labels to front above the video layer
         self.view.bringSubviewToFront(qrCodeResult)
-        self.view.bringSubviewToFront(scanOutput)
         
     }
 
@@ -75,7 +75,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         videoPreviewLayer?.frame = view.layer.bounds
         self.view.layer.addSublayer(videoPreviewLayer!)
         captureSession?.startRunning()
-        
+
 
     }
     
@@ -104,17 +104,28 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                 qrCodeResult.text = jsonValue
             }
 
-            
+            /*
             if let dataFromString = jsonValue!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
                 let json = JSON(data: dataFromString)
                 
-                if let fbName = json["phone"].string{
-                    scanOutput.text = fbName;
+                
+                for(type, content) in json {
+                    contactDetail![type] = content.string
                 }
+                
+                /*
+                if let name = json["name"].string{
+                    scanOutput.text = name;
+                }
+                */
+                
+
             }
+            */
 
         }
     }
+
 
 
 }

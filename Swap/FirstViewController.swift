@@ -11,7 +11,6 @@ import AVFoundation
 
 class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-   asdfasdf
     @IBOutlet weak var qrCodeResult: UILabel!
     @IBOutlet weak var scanOutput: UILabel!
     
@@ -23,6 +22,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         self.configureVideoCapture()
@@ -115,7 +115,5 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
 
         }
     }
-
-
 }
 

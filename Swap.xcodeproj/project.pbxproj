@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A4CBD921C066A8D00DFC871 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CBD911C066A8D00DFC871 /* ThirdViewController.swift */; };
 		1A4CBD941C06839600DFC871 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */; };
 		1AB3FC5B1C03FF4100A59D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */; };
 		1AB3FC5D1C03FF4100A59D72 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */; };
@@ -18,6 +17,11 @@
 		1AB3FC721C03FF4100A59D72 /* SwapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC711C03FF4100A59D72 /* SwapTests.swift */; };
 		1AB3FC7D1C03FF4100A59D72 /* SwapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC7C1C03FF4100A59D72 /* SwapUITests.swift */; };
 		1AB3FC8B1C03FFED00A59D72 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC8A1C03FFED00A59D72 /* Model.swift */; };
+		989BAC701C08F09500BCF428 /* QRDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BAC6F1C08F09500BCF428 /* QRDisplay.swift */; };
+		98B81B771C08C555007A01FD /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98B81B761C08C555007A01FD /* FBSDKCoreKit.framework */; };
+		98B81B791C08C6F9007A01FD /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98B81B781C08C6F9007A01FD /* FBSDKLoginKit.framework */; };
+		98B81B7B1C08CC5E007A01FD /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B81B7A1C08CC5E007A01FD /* FBLoginViewController.swift */; };
+		98B81B7D1C08D107007A01FD /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B81B7C1C08D107007A01FD /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A4CBD911C066A8D00DFC871 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		1AB3FC571C03FF4100A59D72 /* Swap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +58,12 @@
 		1AB3FC7C1C03FF4100A59D72 /* SwapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapUITests.swift; sourceTree = "<group>"; };
 		1AB3FC7E1C03FF4100A59D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AB3FC8A1C03FFED00A59D72 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		989BAC6F1C08F09500BCF428 /* QRDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDisplay.swift; sourceTree = "<group>"; };
+		98B81B701C08BFEA007A01FD /* Swap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swap-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		98B81B761C08C555007A01FD /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		98B81B781C08C6F9007A01FD /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		98B81B7A1C08CC5E007A01FD /* FBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoginViewController.swift; sourceTree = "<group>"; };
+		98B81B7C1C08D107007A01FD /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98B81B791C08C6F9007A01FD /* FBSDKLoginKit.framework in Frameworks */,
+				98B81B771C08C555007A01FD /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,7 @@
 		1AB3FC4E1C03FF4100A59D72 = {
 			isa = PBXGroup;
 			children = (
+				98B81B6B1C08BD61007A01FD /* Frameworks */,
 				1AB3FC591C03FF4100A59D72 /* Swap */,
 				1AB3FC701C03FF4100A59D72 /* SwapTests */,
 				1AB3FC7B1C03FF4100A59D72 /* SwapUITests */,
@@ -105,12 +117,15 @@
 		1AB3FC591C03FF4100A59D72 /* Swap */ = {
 			isa = PBXGroup;
 			children = (
+				98B81B701C08BFEA007A01FD /* Swap-Bridging-Header.h */,
 				1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */,
 				1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */,
 				1AB3FC5E1C03FF4100A59D72 /* SecondViewController.swift */,
+				98B81B7C1C08D107007A01FD /* Cell.swift */,
 				1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */,
-				1A4CBD911C066A8D00DFC871 /* ThirdViewController.swift */,
 				1AB3FC601C03FF4100A59D72 /* Main.storyboard */,
+				989BAC6F1C08F09500BCF428 /* QRDisplay.swift */,
+				98B81B7A1C08CC5E007A01FD /* FBLoginViewController.swift */,
 				1AB3FC631C03FF4100A59D72 /* Assets.xcassets */,
 				1AB3FC651C03FF4100A59D72 /* LaunchScreen.storyboard */,
 				1AB3FC681C03FF4100A59D72 /* Info.plist */,
@@ -135,6 +150,15 @@
 				1AB3FC7E1C03FF4100A59D72 /* Info.plist */,
 			);
 			path = SwapUITests;
+			sourceTree = "<group>";
+		};
+		98B81B6B1C08BD61007A01FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98B81B781C08C6F9007A01FD /* FBSDKLoginKit.framework */,
+				98B81B761C08C555007A01FD /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,12 +223,13 @@
 		1AB3FC4F1C03FF4100A59D72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "James Kim";
 				TargetAttributes = {
 					1AB3FC561C03FF4100A59D72 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = M5F3AX26HV;
+						DevelopmentTeam = 6KAEN63B8H;
 					};
 					1AB3FC6C1C03FF4100A59D72 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -272,8 +297,10 @@
 			files = (
 				1AB3FC5F1C03FF4100A59D72 /* SecondViewController.swift in Sources */,
 				1AB3FC5B1C03FF4100A59D72 /* AppDelegate.swift in Sources */,
-				1A4CBD921C066A8D00DFC871 /* ThirdViewController.swift in Sources */,
+				98B81B7D1C08D107007A01FD /* Cell.swift in Sources */,
+				989BAC701C08F09500BCF428 /* QRDisplay.swift in Sources */,
 				1A4CBD941C06839600DFC871 /* SwiftyJSON.swift in Sources */,
+				98B81B7B1C08CC5E007A01FD /* FBLoginViewController.swift in Sources */,
 				1AB3FC5D1C03FF4100A59D72 /* FirstViewController.swift in Sources */,
 				1AB3FC8B1C03FFED00A59D72 /* Model.swift in Sources */,
 			);
@@ -415,10 +442,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/walkerjordan/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Swap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Swap;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.harvard.cs50.Swap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -426,10 +465,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/walkerjordan/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Swap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Swap;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.harvard.cs50.Swap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swap-Bridging-Header.h";
 			};
 			name = Release;
 		};

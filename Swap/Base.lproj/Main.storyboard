@@ -80,11 +80,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FB login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFT-e4-WIq">
                                 <rect key="frame" x="273" y="53" width="62" height="21"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Card" image="second" id="LiX-lY-nnY"/>
@@ -107,8 +109,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VSq-yT-ogA">
                                 <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <animations/>
                             </imageView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="VSq-yT-ogA" secondAttribute="trailing" constant="160" id="3Kx-7f-tTW"/>
@@ -128,7 +132,6 @@
         <!--Card-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="card" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Swap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
@@ -138,7 +141,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jcH-DJ-MG5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jcH-DJ-MG5">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="302"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,45 +150,36 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="LPi-6k-zms"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3k-Bu-qmA">
-                                <rect key="frame" x="206" y="400" width="189" height="82"/>
-                                <state key="normal" title="Generate"/>
-                                <connections>
-                                    <action selector="generatePress:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="nei-N3-9Pd"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NJW-bZ-pAh">
+                                <rect key="frame" x="0.0" y="301" width="600" height="250"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rq5-Il-Yl7">
+                                        <rect key="frame" x="268" y="110" width="64" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Generate"/>
+                                        <connections>
+                                            <action selector="generatePress:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pcw-ss-LAm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="w3k-Bu-qmA" firstAttribute="top" secondItem="jcH-DJ-MG5" secondAttribute="bottom" constant="137" id="1Wm-lN-7mZ"/>
                             <constraint firstItem="jcH-DJ-MG5" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" id="EfZ-Bn-stn"/>
-                            <constraint firstItem="w3k-Bu-qmA" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="186" id="N9M-Nq-poe"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="w3k-Bu-qmA" secondAttribute="bottom" constant="47" id="Vf0-8m-HNQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jcH-DJ-MG5" secondAttribute="trailing" constant="-20" id="W28-MG-Lzz"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="w3k-Bu-qmA" secondAttribute="trailing" constant="97" id="aDy-hK-PHu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="w3k-Bu-qmA" secondAttribute="trailing" constant="185" id="aht-hZ-Wot"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="w3k-Bu-qmA" secondAttribute="bottom" constant="69" id="gAn-zo-Aso"/>
                             <constraint firstItem="jcH-DJ-MG5" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="hiV-Hd-ied"/>
-                            <constraint firstItem="w3k-Bu-qmA" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="225" id="q5I-32-9Qa"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="w3k-Bu-qmA" secondAttribute="bottom" constant="94" id="sTT-6W-hkt"/>
-                            <constraint firstItem="w3k-Bu-qmA" firstAttribute="top" secondItem="jcH-DJ-MG5" secondAttribute="bottom" constant="98" id="tBq-py-6HJ"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="1Wm-lN-7mZ"/>
-                                <exclude reference="aDy-hK-PHu"/>
-                                <exclude reference="q5I-32-9Qa"/>
-                                <exclude reference="Vf0-8m-HNQ"/>
-                                <exclude reference="sTT-6W-hkt"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Card" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="tableView" destination="jcH-DJ-MG5" id="Pti-Bw-T7B"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1478" y="336"/>
         </scene>

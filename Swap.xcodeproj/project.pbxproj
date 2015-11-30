@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A4CBD941C06839600DFC871 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */; };
+		1A5001271C0C175200E797A1 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5001251C0C175200E797A1 /* FBSDKCoreKit.framework */; };
+		1A5001281C0C175200E797A1 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5001261C0C175200E797A1 /* FBSDKLoginKit.framework */; };
 		1AB3FC5B1C03FF4100A59D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */; };
 		1AB3FC5D1C03FF4100A59D72 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */; };
 		1AB3FC5F1C03FF4100A59D72 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5E1C03FF4100A59D72 /* SecondViewController.swift */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		1A5001251C0C175200E797A1 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		1A5001261C0C175200E797A1 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		1AB3FC571C03FF4100A59D72 /* Swap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				98B81B791C08C6F9007A01FD /* FBSDKLoginKit.framework in Frameworks */,
+				1A5001271C0C175200E797A1 /* FBSDKCoreKit.framework in Frameworks */,
+				1A5001281C0C175200E797A1 /* FBSDKLoginKit.framework in Frameworks */,
 				98B81B771C08C555007A01FD /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +161,8 @@
 		98B81B6B1C08BD61007A01FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A5001251C0C175200E797A1 /* FBSDKCoreKit.framework */,
+				1A5001261C0C175200E797A1 /* FBSDKLoginKit.framework */,
 				98B81B781C08C6F9007A01FD /* FBSDKLoginKit.framework */,
 				98B81B761C08C555007A01FD /* FBSDKCoreKit.framework */,
 			);

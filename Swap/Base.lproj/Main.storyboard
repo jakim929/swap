@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,26 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Point the Camera at a Card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x1-Sc-Btp">
-                                <rect key="frame" x="48" y="263" width="506" height="228"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point the Camera at a Card" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x1-Sc-Btp">
+                                <rect key="frame" x="47" y="394" width="506" height="141"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="Vwo-kB-GXU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="KdU-iR-1lT">
+                                <rect key="frame" x="180" y="28" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7a-kQ-hbn">
+                                        <rect key="frame" x="99" y="53" width="42" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7x1-Sc-Btp" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="29X-nh-sgB"/>
-                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="7x1-Sc-Btp" secondAttribute="bottom" constant="60" id="JVX-B9-qkC"/>
-                            <constraint firstItem="7x1-Sc-Btp" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="435" id="XKC-HQ-XRL"/>
-                            <constraint firstItem="7x1-Sc-Btp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="26" id="t7Y-03-awo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="7x1-Sc-Btp" secondAttribute="trailing" constant="26" id="wgt-bD-R7X"/>
+                            <constraint firstItem="KdU-iR-1lT" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="height" multiplier="2:5" id="Bn9-rk-oQO"/>
+                            <constraint firstItem="7x1-Sc-Btp" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="JLl-nM-l7p"/>
+                            <constraint firstItem="KdU-iR-1lT" firstAttribute="centerX" secondItem="7x1-Sc-Btp" secondAttribute="centerX" id="JqG-KG-j6b"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="7x1-Sc-Btp" secondAttribute="bottom" constant="16" id="ShI-74-MKD"/>
+                            <constraint firstItem="KdU-iR-1lT" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" symbolic="YES" id="UgM-p8-An3"/>
+                            <constraint firstItem="7x1-Sc-Btp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="27" id="gg0-Oq-JVs"/>
+                            <constraint firstAttribute="bottom" secondItem="KdU-iR-1lT" secondAttribute="bottom" constant="444" id="pEN-fb-M6O"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scan" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="contactName" destination="j7a-kQ-hbn" id="Nkb-jo-rdo"/>
+                        <outlet property="contactPanel" destination="KdU-iR-1lT" id="vD5-Sf-9PK"/>
                         <outlet property="qrCodeResult" destination="7x1-Sc-Btp" id="UHX-fQ-e6r"/>
                     </connections>
                 </viewController>

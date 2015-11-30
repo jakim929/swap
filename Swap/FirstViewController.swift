@@ -12,6 +12,9 @@ import AVFoundation
 class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var qrCodeResult: UILabel!
+    @IBOutlet weak var contactName: UILabel!
+
+    @IBOutlet weak var contactPanel: UIView!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -26,12 +29,16 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        contactDetail = [String : String]()
+        
         self.configureVideoCapture()
         self.addVideoPreviewLayer()
         self.initializeQRView()
         
+        
         // Bring labels to front above the video layer
         self.view.bringSubviewToFront(qrCodeResult)
+
         
     }
 
@@ -104,7 +111,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                 qrCodeResult.text = jsonValue
             }
 
-            /*
+            
             if let dataFromString = jsonValue!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
                 let json = JSON(data: dataFromString)
                 
@@ -113,6 +120,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                     contactDetail![type] = content.string
                 }
                 
+                addContactPanel()
                 /*
                 if let name = json["name"].string{
                     scanOutput.text = name;
@@ -121,9 +129,14 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                 
 
             }
-            */
+            
 
         }
+    }
+    
+    func addContactPanel()
+    {
+        self.view.bringSubviewToFront(contactPanel)
     }
 
 

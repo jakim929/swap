@@ -12,9 +12,6 @@ import AVFoundation
 class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var qrCodeResult: UILabel!
-    @IBOutlet weak var contactName: UILabel!
-
-    @IBOutlet weak var contactPanel: UIView!
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -121,7 +118,6 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                     contactDetail![type] = content.string
                 }
                 
-                addContactPanel()
                 /*
                 if let name = json["name"].string{
                     scanOutput.text = name;
@@ -135,10 +131,14 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         }
     }
     
-    func addContactPanel()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!)
     {
-        self.view.bringSubviewToFront(contactPanel)
+        if segue.identifier == "PopContactPanel"{
+            let vc = segue.destinationViewController as! ContactPanelViewController
+            vc.colorString = colorLabel.text
+        }
     }
+
 
 
 

@@ -28,18 +28,31 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-1e-gMZ">
+                                <rect key="frame" x="269" y="206" width="42" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RYW-p4-vNB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7x1-Sc-Btp" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="JLl-nM-l7p"/>
+                            <constraint firstItem="c4y-1e-gMZ" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="269" id="LCN-Bb-7aY"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="7x1-Sc-Btp" secondAttribute="bottom" constant="16" id="ShI-74-MKD"/>
+                            <constraint firstItem="c4y-1e-gMZ" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="186" id="UTX-2x-SWw"/>
                             <constraint firstItem="7x1-Sc-Btp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="27" id="gg0-Oq-JVs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scan" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="qrCodeResult" destination="7x1-Sc-Btp" id="UHX-fQ-e6r"/>
+                        <outlet property="testLabel" destination="c4y-1e-gMZ" id="Cl9-uX-NpI"/>
                         <segue destination="Zi1-0Z-jKl" kind="presentation" identifier="PopContactPanel" id="0HV-Sw-IaQ"/>
                     </connections>
                 </viewController>
@@ -59,8 +72,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Name View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6V-Z3-Dj1">
-                                <rect key="frame" x="199" y="289" width="202" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53r-Sv-VL9">
+                                <rect key="frame" x="257" y="381" width="86" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Add Contact"/>
+                                <connections>
+                                    <action selector="addContactButton:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="nDL-T3-A70"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nm0-Yt-JCi">
+                                <rect key="frame" x="20" y="28" width="124" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Return to Scanner"/>
+                                <connections>
+                                    <action selector="returnButton:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="az5-c7-SZ3"/>
+                                    <segue destination="H39-zM-FZH" kind="unwind" unwindAction="unwindToVC:" id="3Ed-9O-dZf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add Name View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6V-Z3-Dj1">
+                                <rect key="frame" x="196" y="187" width="209" height="186"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="202" id="a3H-Ui-1aI"/>
@@ -73,13 +103,21 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="53r-Sv-VL9" firstAttribute="centerX" secondItem="k6V-Z3-Dj1" secondAttribute="centerX" id="B5I-w4-PjY"/>
+                            <constraint firstItem="53r-Sv-VL9" firstAttribute="top" secondItem="k6V-Z3-Dj1" secondAttribute="bottom" constant="71" id="XdY-o7-Tih"/>
                             <constraint firstItem="k6V-Z3-Dj1" firstAttribute="centerY" secondItem="qRS-LU-AaX" secondAttribute="centerY" id="Xsz-TN-n26"/>
+                            <constraint firstItem="Nm0-Yt-JCi" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="8" symbolic="YES" id="YGI-xC-NXL"/>
+                            <constraint firstItem="Nm0-Yt-JCi" firstAttribute="leading" secondItem="qRS-LU-AaX" secondAttribute="leadingMargin" id="pmE-2B-JHH"/>
                             <constraint firstItem="k6V-Z3-Dj1" firstAttribute="centerX" secondItem="qRS-LU-AaX" secondAttribute="centerX" id="r0i-YT-Odm"/>
                             <constraint firstItem="k6V-Z3-Dj1" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="269" id="uc3-un-1Z5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contactInfo" destination="k6V-Z3-Dj1" id="obu-mD-ZBD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spu-5q-KsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="H39-zM-FZH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1490" y="-462"/>
         </scene>

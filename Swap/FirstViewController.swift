@@ -12,6 +12,11 @@ import AVFoundation
 class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
     @IBOutlet weak var qrCodeResult: UILabel!
+    @IBOutlet weak var testLabel: UILabel!
+    
+    @IBAction func unwindToVC(segue: UIStoryboardSegue) {
+        
+    }
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -19,8 +24,6 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     
     var jsonValue:String?
     var contactDetail:[String : String]?
-    
-    let type = ["name", "facebook", "snapchat", "email", "phone"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
         // Do any additional setup after loading the view, typically from a nib.
         
         contactDetail = [String : String]()
+
         
         self.configureVideoCapture()
         self.addVideoPreviewLayer()
@@ -108,23 +112,20 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                 jsonValue = objMetadataMachineReadableCodeObject.stringValue
                 qrCodeResult.text = jsonValue
             }
-
             
             if let dataFromString = jsonValue!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
                 let json = JSON(data: dataFromString)
-                
                 
                 for(type, content) in json {
                     contactDetail![type] = content.string
                 }
                 
-                /*
-                if let name = json["name"].string{
-                    scanOutput.text = name;
-                }
-                */
-                
+                performSegueWithIdentifier("PopContactPanel", sender: nil)
 
+            }
+            else
+            {
+                qrCodeResult.text = "Not a valid Synqr Code"
             }
             
 
@@ -135,7 +136,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     {
         if segue.identifier == "PopContactPanel"{
             let vc = segue.destinationViewController as! ContactPanelViewController
-            vc.colorString = colorLabel.text
+            vc.contactDetail = self.contactDetail
         }
     }
 

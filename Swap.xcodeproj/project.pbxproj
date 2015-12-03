@@ -11,14 +11,14 @@
 		1A4CBD941C06839600DFC871 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */; };
 		1AB3FC5B1C03FF4100A59D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */; };
 		1AB3FC5D1C03FF4100A59D72 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */; };
-		1AB3FC5F1C03FF4100A59D72 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5E1C03FF4100A59D72 /* SecondViewController.swift */; };
 		1AB3FC621C03FF4100A59D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB3FC601C03FF4100A59D72 /* Main.storyboard */; };
 		1AB3FC641C03FF4100A59D72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AB3FC631C03FF4100A59D72 /* Assets.xcassets */; };
 		1AB3FC671C03FF4100A59D72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB3FC651C03FF4100A59D72 /* LaunchScreen.storyboard */; };
 		1AB3FC721C03FF4100A59D72 /* SwapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC711C03FF4100A59D72 /* SwapTests.swift */; };
 		1AB3FC7D1C03FF4100A59D72 /* SwapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC7C1C03FF4100A59D72 /* SwapUITests.swift */; };
 		1AB3FC8B1C03FFED00A59D72 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC8A1C03FFED00A59D72 /* Model.swift */; };
-		50A4AFB11C0FF91100BBD99C /* cardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A4AFB01C0FF91100BBD99C /* cardTableViewController.swift */; };
+		500918551C101B2F0072D06E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500918541C101B2F0072D06E /* MainTableViewController.swift */; };
+		500918571C101DF30072D06E /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500918561C101DF30072D06E /* DetailTableViewController.swift */; };
 		50A4AFB41C0FFA5900BBD99C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A4AFB21C0FFA5900BBD99C /* FBSDKCoreKit.framework */; };
 		50A4AFB51C0FFA5900BBD99C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A4AFB31C0FFA5900BBD99C /* FBSDKLoginKit.framework */; };
 		989BAC701C08F09500BCF428 /* QRDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BAC6F1C08F09500BCF428 /* QRDisplay.swift */; };
@@ -49,7 +49,6 @@
 		1AB3FC571C03FF4100A59D72 /* Swap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		1AB3FC5E1C03FF4100A59D72 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		1AB3FC611C03FF4100A59D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AB3FC631C03FF4100A59D72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AB3FC661C03FF4100A59D72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +60,8 @@
 		1AB3FC7C1C03FF4100A59D72 /* SwapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapUITests.swift; sourceTree = "<group>"; };
 		1AB3FC7E1C03FF4100A59D72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AB3FC8A1C03FFED00A59D72 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		50A4AFB01C0FF91100BBD99C /* cardTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardTableViewController.swift; sourceTree = "<group>"; };
+		500918541C101B2F0072D06E /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		500918561C101DF30072D06E /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailTableViewController.swift; path = ../DetailTableViewController.swift; sourceTree = "<group>"; };
 		50A4AFB21C0FFA5900BBD99C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		50A4AFB31C0FFA5900BBD99C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		989BAC6F1C08F09500BCF428 /* QRDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRDisplay.swift; sourceTree = "<group>"; };
@@ -124,12 +124,12 @@
 				98B81B701C08BFEA007A01FD /* Swap-Bridging-Header.h */,
 				1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */,
 				1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */,
-				1AB3FC5E1C03FF4100A59D72 /* SecondViewController.swift */,
 				1A2244F81C0D5E82007E37E7 /* ContactPanelViewController.swift */,
 				98B81B7C1C08D107007A01FD /* Cell.swift */,
 				1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */,
 				1AB3FC601C03FF4100A59D72 /* Main.storyboard */,
-				50A4AFB01C0FF91100BBD99C /* cardTableViewController.swift */,
+				500918541C101B2F0072D06E /* MainTableViewController.swift */,
+				500918561C101DF30072D06E /* DetailTableViewController.swift */,
 				989BAC6F1C08F09500BCF428 /* QRDisplay.swift */,
 				98B81B7A1C08CC5E007A01FD /* FBLoginViewController.swift */,
 				1AB3FC631C03FF4100A59D72 /* Assets.xcassets */,
@@ -235,7 +235,7 @@
 				TargetAttributes = {
 					1AB3FC561C03FF4100A59D72 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = M5F3AX26HV;
+						DevelopmentTeam = AQ4UM7VMK3;
 					};
 					1AB3FC6C1C03FF4100A59D72 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -302,15 +302,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A2244F91C0D5E82007E37E7 /* ContactPanelViewController.swift in Sources */,
-				1AB3FC5F1C03FF4100A59D72 /* SecondViewController.swift in Sources */,
 				1AB3FC5B1C03FF4100A59D72 /* AppDelegate.swift in Sources */,
 				98B81B7D1C08D107007A01FD /* Cell.swift in Sources */,
 				989BAC701C08F09500BCF428 /* QRDisplay.swift in Sources */,
 				1A4CBD941C06839600DFC871 /* SwiftyJSON.swift in Sources */,
 				98B81B7B1C08CC5E007A01FD /* FBLoginViewController.swift in Sources */,
+				500918571C101DF30072D06E /* DetailTableViewController.swift in Sources */,
 				1AB3FC5D1C03FF4100A59D72 /* FirstViewController.swift in Sources */,
 				1AB3FC8B1C03FFED00A59D72 /* Model.swift in Sources */,
-				50A4AFB11C0FF91100BBD99C /* cardTableViewController.swift in Sources */,
+				500918551C101B2F0072D06E /* MainTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,10 +454,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = /Users/James/Documents/FacebookSDK;
+				FRAMEWORK_SEARCH_PATHS = /Users/theomendez/Documents/FacebookSDK;
 				INFOPLIST_FILE = Swap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Kim.James.Synqr;
+				PRODUCT_BUNDLE_IDENTIFIER = mendez.Synqr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swap-Bridging-Header.h";
@@ -473,10 +473,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = /Users/James/Documents/FacebookSDK;
+				FRAMEWORK_SEARCH_PATHS = /Users/theomendez/Documents/FacebookSDK;
 				INFOPLIST_FILE = Swap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Kim.James.Synqr;
+				PRODUCT_BUNDLE_IDENTIFIER = mendez.Synqr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swap-Bridging-Header.h";

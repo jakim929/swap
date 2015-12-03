@@ -72,14 +72,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53r-Sv-VL9">
-                                <rect key="frame" x="257" y="381" width="86" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Add Contact"/>
-                                <connections>
-                                    <action selector="addContactButton:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="nDL-T3-A70"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nm0-Yt-JCi">
                                 <rect key="frame" x="20" y="28" width="124" height="30"/>
                                 <animations/>
@@ -89,27 +81,39 @@
                                     <segue destination="H39-zM-FZH" kind="unwind" unwindAction="unwindToVC:" id="3Ed-9O-dZf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add Name View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6V-Z3-Dj1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Name View Controller" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6V-Z3-Dj1">
                                 <rect key="frame" x="196" y="187" width="209" height="186"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="a3H-Ui-1aI"/>
+                                    <constraint firstAttribute="width" constant="209" id="IEe-ZA-Np3"/>
+                                    <constraint firstAttribute="height" constant="186" id="jsn-S7-Veh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53r-Sv-VL9">
+                                <rect key="frame" x="230" y="381" width="140" height="48"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="B0y-H5-e5I"/>
+                                </constraints>
+                                <state key="normal" title="Add to Contact"/>
+                                <connections>
+                                    <action selector="addContactButton:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="nDL-T3-A70"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="53r-Sv-VL9" firstAttribute="centerX" secondItem="k6V-Z3-Dj1" secondAttribute="centerX" id="B5I-w4-PjY"/>
-                            <constraint firstItem="53r-Sv-VL9" firstAttribute="top" secondItem="k6V-Z3-Dj1" secondAttribute="bottom" constant="71" id="XdY-o7-Tih"/>
-                            <constraint firstItem="k6V-Z3-Dj1" firstAttribute="centerY" secondItem="qRS-LU-AaX" secondAttribute="centerY" id="Xsz-TN-n26"/>
                             <constraint firstItem="Nm0-Yt-JCi" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="8" symbolic="YES" id="YGI-xC-NXL"/>
+                            <constraint firstItem="53r-Sv-VL9" firstAttribute="centerX" secondItem="k6V-Z3-Dj1" secondAttribute="centerX" id="d2S-87-2Za"/>
+                            <constraint firstItem="53r-Sv-VL9" firstAttribute="top" secondItem="k6V-Z3-Dj1" secondAttribute="bottom" constant="8" symbolic="YES" id="iQ8-hj-PYG"/>
                             <constraint firstItem="Nm0-Yt-JCi" firstAttribute="leading" secondItem="qRS-LU-AaX" secondAttribute="leadingMargin" id="pmE-2B-JHH"/>
-                            <constraint firstItem="k6V-Z3-Dj1" firstAttribute="centerX" secondItem="qRS-LU-AaX" secondAttribute="centerX" id="r0i-YT-Odm"/>
-                            <constraint firstItem="k6V-Z3-Dj1" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="269" id="uc3-un-1Z5"/>
+                            <constraint firstItem="avq-Tl-mVb" firstAttribute="top" secondItem="53r-Sv-VL9" secondAttribute="bottom" constant="171" id="sNS-YW-UZd"/>
+                            <constraint firstItem="k6V-Z3-Dj1" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="167" id="uBo-p6-8cP"/>
+                            <constraint firstItem="k6V-Z3-Dj1" firstAttribute="centerX" secondItem="qRS-LU-AaX" secondAttribute="centerX" id="zln-dd-9d8"/>
                         </constraints>
                     </view>
                     <connections>

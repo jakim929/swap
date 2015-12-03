@@ -22,7 +22,6 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
-    var jsonValue:String?
     var contactDetail:[String : String]?
 
     override func viewDidLoad() {
@@ -99,6 +98,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
     
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!)
     {
+        
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRectZero
             qrCodeResult.text = "Please Point the Camera at a Card"
@@ -109,24 +109,32 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             let objBarCode = videoPreviewLayer?.transformedMetadataObjectForMetadataObject(objMetadataMachineReadableCodeObject as AVMetadataMachineReadableCodeObject) as! AVMetadataMachineReadableCodeObject
             qrCodeFrameView?.frame = objBarCode.bounds;
             if objMetadataMachineReadableCodeObject.stringValue != nil {
-                jsonValue = objMetadataMachineReadableCodeObject.stringValue
-                qrCodeResult.text = jsonValue
+                let qrString = objMetadataMachineReadableCodeObject.stringValue
+                qrCodeResult.text = qrString
+                
+                if let dataFromString = qrString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+                    let json = JSON(data: dataFromString)
+                    
+                    if json["metadata"]["responseInfo"]["status"].intValue == 200 {
+                        for(type, content) in json {
+                            contactDetail![type] = content.string
+                        }
+                        
+                        performSegueWithIdentifier("PopContactPanel", sender: nil)
+                    }
+                    else
+                    {
+                        qrCodeResult.text = "Not a valid Synqr Code"
+                    }
+
+                }
+                else
+                {
+                    qrCodeResult.text = "Not a valid Synqr Code"
+                }
             }
             
-            if let dataFromString = jsonValue!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
-                let json = JSON(data: dataFromString)
-                
-                for(type, content) in json {
-                    contactDetail![type] = content.string
-                }
-                
-                performSegueWithIdentifier("PopContactPanel", sender: nil)
 
-            }
-            else
-            {
-                qrCodeResult.text = "Not a valid Synqr Code"
-            }
             
 
         }

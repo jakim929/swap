@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -95,33 +95,63 @@
                                 <rect key="frame" x="230" y="381" width="140" height="48"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="B0y-H5-e5I"/>
+                                    <constraint firstAttribute="width" constant="140" id="1Eg-JM-9XM"/>
                                 </constraints>
                                 <state key="normal" title="Add to Contact"/>
                                 <connections>
                                     <action selector="addContactButton:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="nDL-T3-A70"/>
+                                    <action selector="addToContact:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="AyR-NO-9qS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLL-m4-dQf">
-                                <rect key="frame" x="242" y="450" width="116" height="30"/>
+                                <rect key="frame" x="243" y="433" width="116" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jYV-n3-whT"/>
+                                </constraints>
                                 <state key="normal" title="Add to Facebook"/>
                                 <connections>
                                     <action selector="addToFacebook:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="fBD-ox-oxr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-aR-1JV">
+                                <rect key="frame" x="242" y="471" width="118" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BdT-hL-l1B"/>
+                                </constraints>
+                                <state key="normal" title="Add to Instagram"/>
+                                <connections>
+                                    <action selector="addInstagram:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="GP8-VA-Ee8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaR-7Y-xNf">
+                                <rect key="frame" x="243" y="509" width="115" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="D0I-Tj-6gZ"/>
+                                </constraints>
+                                <state key="normal" title="Add to Snapchat"/>
+                                <connections>
+                                    <action selector="addSnapchat:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="61w-Tz-MdV"/>
                                 </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lLL-m4-dQf" firstAttribute="centerX" secondItem="53r-Sv-VL9" secondAttribute="centerX" id="9Du-kR-eiM"/>
+                            <constraint firstItem="lLL-m4-dQf" firstAttribute="top" secondItem="53r-Sv-VL9" secondAttribute="bottom" constant="4" id="0hg-7W-cpu"/>
+                            <constraint firstItem="MaR-7Y-xNf" firstAttribute="top" secondItem="Cqd-aR-1JV" secondAttribute="bottom" constant="8" symbolic="YES" id="2Qi-DO-aDn"/>
+                            <constraint firstItem="lLL-m4-dQf" firstAttribute="leading" secondItem="MaR-7Y-xNf" secondAttribute="leading" id="V45-Eu-Sx7"/>
+                            <constraint firstItem="Cqd-aR-1JV" firstAttribute="top" secondItem="lLL-m4-dQf" secondAttribute="bottom" constant="8" symbolic="YES" id="VyN-WB-led"/>
                             <constraint firstItem="Nm0-Yt-JCi" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="8" symbolic="YES" id="YGI-xC-NXL"/>
-                            <constraint firstItem="53r-Sv-VL9" firstAttribute="centerX" secondItem="k6V-Z3-Dj1" secondAttribute="centerX" id="d2S-87-2Za"/>
-                            <constraint firstItem="53r-Sv-VL9" firstAttribute="top" secondItem="k6V-Z3-Dj1" secondAttribute="bottom" constant="8" symbolic="YES" id="iQ8-hj-PYG"/>
-                            <constraint firstItem="lLL-m4-dQf" firstAttribute="top" secondItem="53r-Sv-VL9" secondAttribute="bottom" constant="21" id="jgh-y1-LME"/>
+                            <constraint firstItem="MaR-7Y-xNf" firstAttribute="centerX" secondItem="53r-Sv-VL9" secondAttribute="centerX" id="atF-OO-f9h"/>
+                            <constraint firstItem="53r-Sv-VL9" firstAttribute="top" secondItem="k6V-Z3-Dj1" secondAttribute="bottom" constant="8" symbolic="YES" id="bRv-oF-MZs"/>
+                            <constraint firstItem="avq-Tl-mVb" firstAttribute="top" secondItem="MaR-7Y-xNf" secondAttribute="bottom" constant="61" id="dNd-fx-gf3"/>
                             <constraint firstItem="Nm0-Yt-JCi" firstAttribute="leading" secondItem="qRS-LU-AaX" secondAttribute="leadingMargin" id="pmE-2B-JHH"/>
-                            <constraint firstItem="avq-Tl-mVb" firstAttribute="top" secondItem="53r-Sv-VL9" secondAttribute="bottom" constant="171" id="sNS-YW-UZd"/>
+                            <constraint firstItem="53r-Sv-VL9" firstAttribute="centerX" secondItem="k6V-Z3-Dj1" secondAttribute="centerX" id="sap-oc-8gK"/>
                             <constraint firstItem="k6V-Z3-Dj1" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="167" id="uBo-p6-8cP"/>
+                            <constraint firstItem="lLL-m4-dQf" firstAttribute="centerX" secondItem="Cqd-aR-1JV" secondAttribute="centerX" id="uLw-Wx-baf"/>
                             <constraint firstItem="k6V-Z3-Dj1" firstAttribute="centerX" secondItem="qRS-LU-AaX" secondAttribute="centerX" id="zln-dd-9d8"/>
                         </constraints>
                     </view>
@@ -141,6 +171,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ByP-tV-oRF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" reuseIdentifier="tableCell" id="KoO-tH-6RQ">
@@ -149,7 +180,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KoO-tH-6RQ" id="jA7-VH-AzU">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
                                 <connections>
                                     <segue destination="1Jg-zp-G5r" kind="show" identifier="edit" id="j4a-Om-EGc"/>
                                 </connections>
@@ -173,6 +206,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="F5h-RM-Gkk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Info" id="SLq-6e-kdf">
@@ -186,11 +220,14 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2dH-yB-gqt">
                                                     <rect key="frame" x="0.0" y="0.0" width="554" height="30"/>
+                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
+                                            <animations/>
                                         </tableViewCellContentView>
+                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -325,6 +362,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oFH-sR-ceh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

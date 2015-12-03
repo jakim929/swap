@@ -5,12 +5,12 @@
 //  Created by Walker Jordan on 11/27/15.
 //  Copyright © 2015 James Kim. All rights reserved.
 //
-
+/*
 import UIKit
 
 class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
-    var cardVC : SecondViewController?;
+    var cardVC : Firs?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,3 +95,4 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     */
 
 }
+*/

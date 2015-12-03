@@ -21,10 +21,12 @@ class ContactPanelViewController: UIViewController
         
         
     }
-
     
+    @IBAction func addToFacebook(sender: UIButton) {
+        addFBFriend(contactDetail!["facebook"]!)
+    }
     
-    @IBAction func addContactButton(sender: UIButton) {
+    @IBAction func addToContact(sender: UIButton) {
         AppDelegate.getAppDelegate().requestForAccess { (accessGranted) -> Void in
             if accessGranted {
                 self.createContact()
@@ -72,6 +74,26 @@ class ContactPanelViewController: UIViewController
         }
         
     }
+    
+    func addFBFriend(fbid : String){
+        
+        let fbAccess = "fb://profile/" + fbid
+        
+        if let fbURL = NSURL(string: fbAccess)
+        {
+            if UIApplication.sharedApplication().canOpenURL(fbURL)
+            {
+                UIApplication.sharedApplication().openURL(fbURL)
+                
+            } else {
+                //redirect to safari because the user doesn't have Facebook
+                UIApplication.sharedApplication().openURL(NSURL(string: "http://facebook.com/" + fbid)!)
+            }
+        }
+
+    }
+    
+    
     
     
     

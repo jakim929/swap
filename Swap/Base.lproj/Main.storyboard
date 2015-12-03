@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -103,13 +103,23 @@
                                     <action selector="addContactButton:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="nDL-T3-A70"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLL-m4-dQf">
+                                <rect key="frame" x="242" y="450" width="116" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Add to Facebook"/>
+                                <connections>
+                                    <action selector="addToFacebook:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="fBD-ox-oxr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lLL-m4-dQf" firstAttribute="centerX" secondItem="53r-Sv-VL9" secondAttribute="centerX" id="9Du-kR-eiM"/>
                             <constraint firstItem="Nm0-Yt-JCi" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="8" symbolic="YES" id="YGI-xC-NXL"/>
                             <constraint firstItem="53r-Sv-VL9" firstAttribute="centerX" secondItem="k6V-Z3-Dj1" secondAttribute="centerX" id="d2S-87-2Za"/>
                             <constraint firstItem="53r-Sv-VL9" firstAttribute="top" secondItem="k6V-Z3-Dj1" secondAttribute="bottom" constant="8" symbolic="YES" id="iQ8-hj-PYG"/>
+                            <constraint firstItem="lLL-m4-dQf" firstAttribute="top" secondItem="53r-Sv-VL9" secondAttribute="bottom" constant="21" id="jgh-y1-LME"/>
                             <constraint firstItem="Nm0-Yt-JCi" firstAttribute="leading" secondItem="qRS-LU-AaX" secondAttribute="leadingMargin" id="pmE-2B-JHH"/>
                             <constraint firstItem="avq-Tl-mVb" firstAttribute="top" secondItem="53r-Sv-VL9" secondAttribute="bottom" constant="171" id="sNS-YW-UZd"/>
                             <constraint firstItem="k6V-Z3-Dj1" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="167" id="uBo-p6-8cP"/>
@@ -161,6 +171,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="uFK-nl-ZqE">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="MOa-SG-Drp">
@@ -169,7 +180,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MOa-SG-Drp" id="87Q-TE-IVn">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
                                 </tableViewCellContentView>
+                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -320,6 +333,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fPQ-ax-GKw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

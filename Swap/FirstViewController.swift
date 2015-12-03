@@ -114,13 +114,21 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                 
                 if let dataFromString = qrString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
                     let json = JSON(data: dataFromString)
-                    
-                    if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-                        for(type, content) in json {
-                            contactDetail![type] = content.string
+
+                    if let checkField = json["check"].string{
+                        if (checkField == "Synqr")
+                        {
+                            for(type, content) in json {
+                                contactDetail![type] = content.string
+                            }
+                            performSegueWithIdentifier("PopContactPanel", sender: nil)
+                        }
+                        else
+                        {
+                            qrCodeResult.text = "Not a valid Synqr Code"
                         }
                         
-                        performSegueWithIdentifier("PopContactPanel", sender: nil)
+
                     }
                     else
                     {
@@ -128,10 +136,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                     }
 
                 }
-                else
-                {
-                    qrCodeResult.text = "Not a valid Synqr Code"
-                }
+
             }
             
 

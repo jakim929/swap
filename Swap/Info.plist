@@ -33,6 +33,7 @@
 	<string>Synqr</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
+		<string>fb</string>
 		<string>fbapi</string>
 		<string>fbauth2</string>
 		<string>fbshareextension</string>

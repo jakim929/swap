@@ -12,17 +12,21 @@ class MainTableViewController: UITableViewController {
     
     var models = ["fname", "lname", "facebook", "snapchat", "instagram", "email", "phone"]
     
+    var content = ["", "","","","","","", "", ""]
+    
     @IBAction func saveToMainViewController (segue:UIStoryboardSegue) {
         
+        /*
         let detailViewController = segue.sourceViewController as! DetailTableViewController
         
         let index = detailViewController.index
         
-        let modelString = detailViewController.editedModel
+        let modelString = detailViewController.textField.text
         
         models[index!] = modelString!
-        
+        */
         tableView.reloadData()
+
         
     }
     
@@ -55,12 +59,13 @@ class MainTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath) as! ContactTableViewCell
         
         // Configure the cell...
         
-        cell.textLabel?.text = models[indexPath.row]
-        
+        cell.categoryLabel.text = models[indexPath.row]
+        cell.contentLabel.text = content[indexPath.row]
+
         return cell
     }
     
@@ -111,7 +116,8 @@ class MainTableViewController: UITableViewController {
             let detailViewController = segue.destinationViewController as! DetailTableViewController
             
             detailViewController.index = path?.row
-            detailViewController.modelArray = models
+            detailViewController.currentContent = content
+            
             
         }
         // Get the new view controller using [segue destinationViewController].

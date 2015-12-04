@@ -10,18 +10,16 @@ import UIKit
 
 class DetailTableViewController: UITableViewController {
     
-    @IBOutlet weak var editModelTextField: UITextField!
+    @IBOutlet weak var textField: UITextField!
     
     var index:Int?
     
-    var modelArray:[String]!
-    
-    var editedModel:String?
-    
+    var currentContent:[String]!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        editModelTextField.text = modelArray[index!]
+        textField.text = currentContent[index!]
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,7 +35,7 @@ class DetailTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
-            editModelTextField.becomeFirstResponder()
+            textField.becomeFirstResponder()
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
@@ -105,7 +103,13 @@ class DetailTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "save" {
-            editedModel = editModelTextField.text
+            let destination = segue.destinationViewController as! MainTableViewController
+            if (textField != nil)
+            {
+                destination.content[index!] = textField.text!
+                
+            }
+
         }
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.

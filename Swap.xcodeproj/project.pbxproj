@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		1A2244F91C0D5E82007E37E7 /* ContactPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2244F81C0D5E82007E37E7 /* ContactPanelViewController.swift */; };
 		1A4CBD941C06839600DFC871 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */; };
+		1A835B171C1140AE00A74865 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A835B151C1140AE00A74865 /* FBSDKCoreKit.framework */; };
+		1A835B181C1140AE00A74865 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A835B161C1140AE00A74865 /* FBSDKLoginKit.framework */; };
+		1A835B1A1C11422D00A74865 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835B191C11422D00A74865 /* BaseTableViewController.swift */; };
+		1A835B1C1C11489500A74865 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835B1B1C11489500A74865 /* ContactTableViewCell.swift */; };
 		1AB3FC5B1C03FF4100A59D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */; };
 		1AB3FC5D1C03FF4100A59D72 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */; };
 		1AB3FC621C03FF4100A59D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB3FC601C03FF4100A59D72 /* Main.storyboard */; };
@@ -46,6 +50,10 @@
 /* Begin PBXFileReference section */
 		1A2244F81C0D5E82007E37E7 /* ContactPanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactPanelViewController.swift; path = ../ContactPanelViewController.swift; sourceTree = "<group>"; };
 		1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		1A835B151C1140AE00A74865 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		1A835B161C1140AE00A74865 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		1A835B191C11422D00A74865 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		1A835B1B1C11489500A74865 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		1AB3FC571C03FF4100A59D72 /* Swap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +84,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A4AFB41C0FFA5900BBD99C /* FBSDKCoreKit.framework in Frameworks */,
+				1A835B171C1140AE00A74865 /* FBSDKCoreKit.framework in Frameworks */,
+				1A835B181C1140AE00A74865 /* FBSDKLoginKit.framework in Frameworks */,
 				50A4AFB51C0FFA5900BBD99C /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +146,8 @@
 				1AB3FC651C03FF4100A59D72 /* LaunchScreen.storyboard */,
 				1AB3FC681C03FF4100A59D72 /* Info.plist */,
 				1AB3FC8A1C03FFED00A59D72 /* Model.swift */,
+				1A835B191C11422D00A74865 /* BaseTableViewController.swift */,
+				1A835B1B1C11489500A74865 /* ContactTableViewCell.swift */,
 			);
 			path = Swap;
 			sourceTree = "<group>";
@@ -163,6 +175,8 @@
 			children = (
 				50A4AFB21C0FFA5900BBD99C /* FBSDKCoreKit.framework */,
 				50A4AFB31C0FFA5900BBD99C /* FBSDKLoginKit.framework */,
+				1A835B151C1140AE00A74865 /* FBSDKCoreKit.framework */,
+				1A835B161C1140AE00A74865 /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,7 +249,7 @@
 				TargetAttributes = {
 					1AB3FC561C03FF4100A59D72 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = AQ4UM7VMK3;
+						DevelopmentTeam = M5F3AX26HV;
 					};
 					1AB3FC6C1C03FF4100A59D72 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -301,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A835B1C1C11489500A74865 /* ContactTableViewCell.swift in Sources */,
 				1A2244F91C0D5E82007E37E7 /* ContactPanelViewController.swift in Sources */,
 				1AB3FC5B1C03FF4100A59D72 /* AppDelegate.swift in Sources */,
 				98B81B7D1C08D107007A01FD /* Cell.swift in Sources */,
@@ -310,6 +325,7 @@
 				500918571C101DF30072D06E /* DetailTableViewController.swift in Sources */,
 				1AB3FC5D1C03FF4100A59D72 /* FirstViewController.swift in Sources */,
 				1AB3FC8B1C03FFED00A59D72 /* Model.swift in Sources */,
+				1A835B1A1C11422D00A74865 /* BaseTableViewController.swift in Sources */,
 				500918551C101B2F0072D06E /* MainTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,10 +470,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = /Users/theomendez/Documents/FacebookSDK;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/James/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Swap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mendez.Synqr;
+				PRODUCT_BUNDLE_IDENTIFIER = james.Synqr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swap-Bridging-Header.h";
@@ -473,10 +492,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = /Users/theomendez/Documents/FacebookSDK;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/James/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Swap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mendez.Synqr;
+				PRODUCT_BUNDLE_IDENTIFIER = james.Synqr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Swap-Bridging-Header.h";

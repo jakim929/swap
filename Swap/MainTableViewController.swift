@@ -12,7 +12,7 @@ class MainTableViewController: UITableViewController {
     
     var models = ["fname", "lname", "facebook", "snapchat", "instagram", "email", "phone"]
     
-    var content = ["", "","","","","","", "", ""]
+    var content = ["", "","","","","",""]
     
     @IBAction func saveToMainViewController (segue:UIStoryboardSegue) {
         

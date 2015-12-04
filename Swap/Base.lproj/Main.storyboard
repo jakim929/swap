@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -178,19 +179,25 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KoO-tH-6RQ" id="jA7-VH-AzU">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-dE-7QZ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-dE-7QZ">
                                             <rect key="frame" x="21" y="11" width="102" height="21"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="102" id="B7L-Wb-hVy"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITK-dq-w94">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITK-dq-w94">
                                             <rect key="frame" x="459" y="11" width="126" height="21"/>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="126" id="dTR-EY-hNk"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -198,10 +205,12 @@
                                     </subviews>
                                     <animations/>
                                     <constraints>
-                                        <constraint firstItem="ITK-dq-w94" firstAttribute="centerY" secondItem="jA7-VH-AzU" secondAttribute="centerY" id="Da0-Ey-tt0"/>
-                                        <constraint firstItem="VlS-dE-7QZ" firstAttribute="leading" secondItem="jA7-VH-AzU" secondAttribute="leadingMargin" constant="13" id="Kn0-hF-3rd"/>
-                                        <constraint firstItem="VlS-dE-7QZ" firstAttribute="centerY" secondItem="jA7-VH-AzU" secondAttribute="centerY" id="tnd-5f-eZI"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="ITK-dq-w94" secondAttribute="trailing" constant="7" id="y2L-dR-cXU"/>
+                                        <constraint firstItem="VlS-dE-7QZ" firstAttribute="leading" secondItem="jA7-VH-AzU" secondAttribute="leadingMargin" constant="13" id="QJM-aK-jgM"/>
+                                        <constraint firstItem="VlS-dE-7QZ" firstAttribute="centerY" secondItem="jA7-VH-AzU" secondAttribute="centerY" id="b41-Qm-8N1"/>
+                                        <constraint firstItem="ITK-dq-w94" firstAttribute="top" secondItem="jA7-VH-AzU" secondAttribute="topMargin" constant="3" id="jpS-mB-Ufq"/>
+                                        <constraint firstItem="VlS-dE-7QZ" firstAttribute="firstBaseline" secondItem="ITK-dq-w94" secondAttribute="firstBaseline" id="m5L-u2-yud"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ITK-dq-w94" secondAttribute="trailing" constant="7" id="pK2-eU-sFK"/>
+                                        <constraint firstItem="VlS-dE-7QZ" firstAttribute="baseline" secondItem="ITK-dq-w94" secondAttribute="baseline" id="qTK-dK-aMh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
@@ -312,7 +321,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FACEBOOK Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jif-w1-PJz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FACEBOOK Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jif-w1-PJz">
                                 <rect key="frame" x="187" y="289" width="134" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -323,9 +332,9 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jif-w1-PJz" firstAttribute="centerX" secondItem="kLR-Bb-Ea4" secondAttribute="centerX" id="5b7-Da-ZC1"/>
-                            <constraint firstItem="Jif-w1-PJz" firstAttribute="centerY" secondItem="kLR-Bb-Ea4" secondAttribute="centerY" id="6dw-LN-dfQ"/>
-                            <constraint firstItem="Jif-w1-PJz" firstAttribute="top" secondItem="LHK-pe-KAM" secondAttribute="bottom" constant="225" id="gbL-hf-mns"/>
+                            <constraint firstItem="Jif-w1-PJz" firstAttribute="leading" secondItem="kLR-Bb-Ea4" secondAttribute="leading" constant="187" id="EXk-DF-P6h"/>
+                            <constraint firstItem="Jif-w1-PJz" firstAttribute="centerY" secondItem="kLR-Bb-Ea4" secondAttribute="centerY" id="pWN-c9-yF9"/>
+                            <constraint firstItem="Jif-w1-PJz" firstAttribute="top" secondItem="LHK-pe-KAM" secondAttribute="bottom" constant="225" id="sCw-va-HVy"/>
                         </constraints>
                     </view>
                 </viewController>

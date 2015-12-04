@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A2244F91C0D5E82007E37E7 /* ContactPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2244F81C0D5E82007E37E7 /* ContactPanelViewController.swift */; };
 		1A4CBD941C06839600DFC871 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */; };
-		1A835B171C1140AE00A74865 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A835B151C1140AE00A74865 /* FBSDKCoreKit.framework */; };
 		1A835B181C1140AE00A74865 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A835B161C1140AE00A74865 /* FBSDKLoginKit.framework */; };
 		1A835B1C1C11489500A74865 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835B1B1C11489500A74865 /* ContactTableViewCell.swift */; };
 		1A835B201C117CE500A74865 /* QRCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835B1F1C117CE500A74865 /* QRCardViewController.swift */; };
@@ -24,7 +23,6 @@
 		500918551C101B2F0072D06E /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500918541C101B2F0072D06E /* MainTableViewController.swift */; };
 		500918571C101DF30072D06E /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500918561C101DF30072D06E /* DetailTableViewController.swift */; };
 		50A4AFB41C0FFA5900BBD99C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A4AFB21C0FFA5900BBD99C /* FBSDKCoreKit.framework */; };
-		50A4AFB51C0FFA5900BBD99C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A4AFB31C0FFA5900BBD99C /* FBSDKLoginKit.framework */; };
 		989BAC701C08F09500BCF428 /* QRDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989BAC6F1C08F09500BCF428 /* QRDisplay.swift */; };
 		98B81B7B1C08CC5E007A01FD /* FBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B81B7A1C08CC5E007A01FD /* FBLoginViewController.swift */; };
 		98B81B7D1C08D107007A01FD /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B81B7C1C08D107007A01FD /* Cell.swift */; };
@@ -84,9 +82,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50A4AFB41C0FFA5900BBD99C /* FBSDKCoreKit.framework in Frameworks */,
-				1A835B171C1140AE00A74865 /* FBSDKCoreKit.framework in Frameworks */,
 				1A835B181C1140AE00A74865 /* FBSDKLoginKit.framework in Frameworks */,
-				50A4AFB51C0FFA5900BBD99C /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +240,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "James Kim";
 				TargetAttributes = {
 					1AB3FC561C03FF4100A59D72 = {

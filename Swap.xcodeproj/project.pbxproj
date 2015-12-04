@@ -11,8 +11,8 @@
 		1A4CBD941C06839600DFC871 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */; };
 		1A835B171C1140AE00A74865 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A835B151C1140AE00A74865 /* FBSDKCoreKit.framework */; };
 		1A835B181C1140AE00A74865 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A835B161C1140AE00A74865 /* FBSDKLoginKit.framework */; };
-		1A835B1A1C11422D00A74865 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835B191C11422D00A74865 /* BaseTableViewController.swift */; };
 		1A835B1C1C11489500A74865 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835B1B1C11489500A74865 /* ContactTableViewCell.swift */; };
+		1A835B201C117CE500A74865 /* QRCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A835B1F1C117CE500A74865 /* QRCardViewController.swift */; };
 		1AB3FC5B1C03FF4100A59D72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */; };
 		1AB3FC5D1C03FF4100A59D72 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */; };
 		1AB3FC621C03FF4100A59D72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AB3FC601C03FF4100A59D72 /* Main.storyboard */; };
@@ -52,8 +52,8 @@
 		1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		1A835B151C1140AE00A74865 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1A835B161C1140AE00A74865 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		1A835B191C11422D00A74865 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		1A835B1B1C11489500A74865 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		1A835B1F1C117CE500A74865 /* QRCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCardViewController.swift; sourceTree = "<group>"; };
 		1AB3FC571C03FF4100A59D72 /* Swap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AB3FC5A1C03FF4100A59D72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1AB3FC5C1C03FF4100A59D72 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +138,7 @@
 				98B81B7C1C08D107007A01FD /* Cell.swift */,
 				1A4CBD931C06839600DFC871 /* SwiftyJSON.swift */,
 				1AB3FC601C03FF4100A59D72 /* Main.storyboard */,
+				1A835B1F1C117CE500A74865 /* QRCardViewController.swift */,
 				500918541C101B2F0072D06E /* MainTableViewController.swift */,
 				500918561C101DF30072D06E /* DetailTableViewController.swift */,
 				989BAC6F1C08F09500BCF428 /* QRDisplay.swift */,
@@ -146,7 +147,6 @@
 				1AB3FC651C03FF4100A59D72 /* LaunchScreen.storyboard */,
 				1AB3FC681C03FF4100A59D72 /* Info.plist */,
 				1AB3FC8A1C03FFED00A59D72 /* Model.swift */,
-				1A835B191C11422D00A74865 /* BaseTableViewController.swift */,
 				1A835B1B1C11489500A74865 /* ContactTableViewCell.swift */,
 			);
 			path = Swap;
@@ -320,12 +320,12 @@
 				1AB3FC5B1C03FF4100A59D72 /* AppDelegate.swift in Sources */,
 				98B81B7D1C08D107007A01FD /* Cell.swift in Sources */,
 				989BAC701C08F09500BCF428 /* QRDisplay.swift in Sources */,
+				1A835B201C117CE500A74865 /* QRCardViewController.swift in Sources */,
 				1A4CBD941C06839600DFC871 /* SwiftyJSON.swift in Sources */,
 				98B81B7B1C08CC5E007A01FD /* FBLoginViewController.swift in Sources */,
 				500918571C101DF30072D06E /* DetailTableViewController.swift in Sources */,
 				1AB3FC5D1C03FF4100A59D72 /* FirstViewController.swift in Sources */,
 				1AB3FC8B1C03FFED00A59D72 /* Model.swift in Sources */,
-				1A835B1A1C11422D00A74865 /* BaseTableViewController.swift in Sources */,
 				500918551C101B2F0072D06E /* MainTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

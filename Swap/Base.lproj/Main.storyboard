@@ -99,8 +99,7 @@
                                 </constraints>
                                 <state key="normal" title="Add to Contact"/>
                                 <connections>
-                                    <action selector="addContactButton:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="nDL-T3-A70"/>
-                                    <action selector="addToContact:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="AyR-NO-9qS"/>
+                                    <action selector="addToContact:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="PXG-0F-YO6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLL-m4-dQf">
@@ -111,7 +110,7 @@
                                 </constraints>
                                 <state key="normal" title="Add to Facebook"/>
                                 <connections>
-                                    <action selector="addToFacebook:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="fBD-ox-oxr"/>
+                                    <action selector="addFacebook:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="azV-D1-h90"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-aR-1JV">
@@ -133,7 +132,7 @@
                                 </constraints>
                                 <state key="normal" title="Add to Snapchat"/>
                                 <connections>
-                                    <action selector="addSnapchat:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="61w-Tz-MdV"/>
+                                    <action selector="addSnapchat:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="UPC-Ke-2fG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -208,7 +207,6 @@
                                 <connections>
                                     <outlet property="categoryLabel" destination="VlS-dE-7QZ" id="N9T-XB-bxE"/>
                                     <outlet property="contentLabel" destination="ITK-dq-w94" id="tz4-Rj-OjA"/>
-                                    <segue destination="1Jg-zp-G5r" kind="show" identifier="edit" id="j4a-Om-EGc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -217,9 +215,29 @@
                             <outlet property="delegate" destination="jG3-mB-Cs6" id="Hyj-nm-oSH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="myCard" id="SrK-TE-HtV"/>
+                    <navigationItem key="navigationItem" title="myCard" id="SrK-TE-HtV">
+                        <barButtonItem key="rightBarButtonItem" id="hBd-Sx-DtW">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M88-Fd-3Pe">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <segue destination="89i-PI-cF5" kind="unwind" unwindAction="unwindToQRCodeVC:" id="gHa-LW-QG3"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <segue destination="89i-PI-cF5" kind="unwind" unwindAction="unwindToCardView:" id="Nvr-5Q-0RH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="zNp-4R-Hnw" kind="show" identifier="fbLogin" id="l8m-9i-laT"/>
+                        <segue destination="1Jg-zp-G5r" kind="show" identifier="edit" id="9hz-9Z-6gr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ix-gC-UCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="89i-PI-cF5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1140" y="669"/>
         </scene>
@@ -280,6 +298,39 @@
                 <exit id="dfa-zm-Em8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1930" y="693"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6dc-PJ-yMg">
+            <objects>
+                <viewController id="zNp-4R-Hnw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LHK-pe-KAM"/>
+                        <viewControllerLayoutGuide type="bottom" id="dZ5-YG-XGh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kLR-Bb-Ea4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FACEBOOK Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jif-w1-PJz">
+                                <rect key="frame" x="187" y="289" width="134" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jif-w1-PJz" firstAttribute="centerX" secondItem="kLR-Bb-Ea4" secondAttribute="centerX" id="5b7-Da-ZC1"/>
+                            <constraint firstItem="Jif-w1-PJz" firstAttribute="centerY" secondItem="kLR-Bb-Ea4" secondAttribute="centerY" id="6dw-LN-dfQ"/>
+                            <constraint firstItem="Jif-w1-PJz" firstAttribute="top" secondItem="LHK-pe-KAM" secondAttribute="bottom" constant="225" id="gbL-hf-mns"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jx-b4-6Pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939" y="1445"/>
         </scene>
         <!--Card-->
         <scene sceneID="zhc-fO-08d">
@@ -355,7 +406,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0h-x8-kWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3900" y="346"/>
+            <point key="canvasLocation" x="2964" y="178"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -370,12 +421,59 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="rnw-z4-VCG" kind="relationship" relationship="viewControllers" id="jDr-SK-CBd"/>
+                        <segue destination="Vyj-Gl-ntQ" kind="relationship" relationship="viewControllers" id="PbA-Gx-4sP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-156" y="-128"/>
+        </scene>
+        <!--Card-->
+        <scene sceneID="xcF-I3-lDB">
+            <objects>
+                <viewController id="Vyj-Gl-ntQ" customClass="QRCardViewController" customModule="Swap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CRw-KR-SoV"/>
+                        <viewControllerLayoutGuide type="bottom" id="dNp-SF-IaF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZpG-SG-yBa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLJ-A4-I5U">
+                                <rect key="frame" x="517" y="20" width="63" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Edit Data"/>
+                                <connections>
+                                    <segue destination="rnw-z4-VCG" kind="show" id="wIM-N9-odg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J1X-Iz-oby">
+                                <rect key="frame" x="180" y="180" width="240" height="240"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Uy1-R1-49M"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J1X-Iz-oby" firstAttribute="centerX" secondItem="ZpG-SG-yBa" secondAttribute="centerX" id="0qT-Mc-jFw"/>
+                            <constraint firstItem="LLJ-A4-I5U" firstAttribute="trailing" secondItem="ZpG-SG-yBa" secondAttribute="trailingMargin" id="9sh-Au-hMd"/>
+                            <constraint firstItem="LLJ-A4-I5U" firstAttribute="top" secondItem="CRw-KR-SoV" secondAttribute="bottom" id="eok-QP-XoV"/>
+                            <constraint firstItem="J1X-Iz-oby" firstAttribute="centerY" secondItem="ZpG-SG-yBa" secondAttribute="centerY" id="ogh-uX-tvz"/>
+                            <constraint firstItem="dNp-SF-IaF" firstAttribute="top" secondItem="J1X-Iz-oby" secondAttribute="bottom" constant="131" id="pGe-hR-wgt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Card" image="second" id="mwB-mw-5XR"/>
+                    <connections>
+                        <outlet property="QRCodeView" destination="J1X-Iz-oby" id="Nrq-9o-xfF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbf-Jn-iJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-371" y="655"/>
         </scene>
         <!--Card-->
         <scene sceneID="XuE-bv-cqY">

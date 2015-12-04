@@ -69,6 +69,17 @@ class MainTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.row == 2 {
+            self.performSegueWithIdentifier("fbLogin", sender: self)
+        }
+        else
+        {
+            self.performSegueWithIdentifier("edit", sender: self)
+        }
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -455,20 +456,35 @@
                                     <constraint firstAttribute="width" constant="240" id="Uy1-R1-49M"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PE9-Sw-RO9">
+                                <rect key="frame" x="131" y="95" width="339" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="339" id="MRq-Rw-8lD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="J1X-Iz-oby" firstAttribute="centerX" secondItem="ZpG-SG-yBa" secondAttribute="centerX" id="0qT-Mc-jFw"/>
+                            <constraint firstItem="J1X-Iz-oby" firstAttribute="width" secondItem="ZpG-SG-yBa" secondAttribute="height" multiplier="2:5" id="6Wt-Th-Lx8"/>
                             <constraint firstItem="LLJ-A4-I5U" firstAttribute="trailing" secondItem="ZpG-SG-yBa" secondAttribute="trailingMargin" id="9sh-Au-hMd"/>
+                            <constraint firstItem="J1X-Iz-oby" firstAttribute="top" secondItem="PE9-Sw-RO9" secondAttribute="bottom" constant="64" id="Mq5-Cb-x5P"/>
+                            <constraint firstItem="PE9-Sw-RO9" firstAttribute="centerX" secondItem="J1X-Iz-oby" secondAttribute="centerX" id="SOU-V7-cQi"/>
                             <constraint firstItem="LLJ-A4-I5U" firstAttribute="top" secondItem="CRw-KR-SoV" secondAttribute="bottom" id="eok-QP-XoV"/>
+                            <constraint firstItem="PE9-Sw-RO9" firstAttribute="top" secondItem="CRw-KR-SoV" secondAttribute="bottom" constant="75" id="hVi-km-Cdg"/>
                             <constraint firstItem="J1X-Iz-oby" firstAttribute="centerY" secondItem="ZpG-SG-yBa" secondAttribute="centerY" id="ogh-uX-tvz"/>
                             <constraint firstItem="dNp-SF-IaF" firstAttribute="top" secondItem="J1X-Iz-oby" secondAttribute="bottom" constant="131" id="pGe-hR-wgt"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Card" image="second" id="mwB-mw-5XR"/>
                     <connections>
-                        <outlet property="QRCodeView" destination="J1X-Iz-oby" id="Nrq-9o-xfF"/>
+                        <outlet property="imgQRCode" destination="J1X-Iz-oby" id="G5l-in-NVm"/>
+                        <outlet property="statusLabel" destination="PE9-Sw-RO9" id="pGJ-nh-A3s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbf-Jn-iJL" userLabel="First Responder" sceneMemberID="firstResponder"/>

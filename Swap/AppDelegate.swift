@@ -21,17 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
-    
-    func application(application: UIApplication,
-        openURL url: NSURL,
-        sourceApplication: String?,
-        annotation: AnyObject?) -> Bool {
-            return FBSDKApplicationDelegate.sharedInstance().application(
-                application,
-                openURL: url,
-                sourceApplication: sourceApplication,
-                annotation: annotation)
-    }
+
     
     func application(application: UIApplication, openURL url:NSURL, sourceApplication:String?, annotation: AnyObject) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, openURL: url, sourceApplication: sourceApplication, annotation: annotation)

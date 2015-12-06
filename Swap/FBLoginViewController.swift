@@ -10,6 +10,8 @@ import UIKit
 
 class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    var currentSynqrCode : SynqrCode?
+    
     var infodict : NSDictionary!
     
     override func viewDidLoad() {
@@ -85,24 +87,14 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     // http://ashishkakkad.com/2015/05/facebook-login-swift-language-ios-8/
     
-    func accessFBUserData(){
-        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
-            if (error == nil){
-                let fbloginresult : FBSDKLoginManagerLoginResult = result
-                if(fbloginresult.grantedPermissions.contains("email"))
-                {
-                    self.getFBUserData()
-                    fbLoginManager.logOut()
-                }
-            }
-        })
-    }
     
-    func getFBUserData(){
+    func getSaveFBUserID(){
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
+                    
+                    let fbid = result.valueForKey("id")
+                    
                     self.infodict = result as! NSDictionary
                     print(result)
                     print(self.infodict)

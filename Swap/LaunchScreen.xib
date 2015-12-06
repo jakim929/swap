@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleAspectFit" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The fastest way to exchange contact information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9t-P4-wWr">
+                    <rect key="frame" x="13" y="385" width="293" height="50"/>
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qEX-uA-bNv">
+                    <rect key="frame" x="107" y="128" width="105" height="46"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Synqr">
+                            <attributes>
+                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <font key="NSFont" size="38" name="HelveticaNeue-Bold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="p7r-0C-9sK">
+                    <rect key="frame" x="39" y="190" width="242" height="187"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="M9t-P4-wWr" secondAttribute="bottom" constant="133" id="0sh-kQ-FUW"/>
+                <constraint firstItem="p7r-0C-9sK" firstAttribute="top" secondItem="qEX-uA-bNv" secondAttribute="bottom" constant="16" id="4JF-h2-RCg"/>
+                <constraint firstItem="p7r-0C-9sK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="20" id="AWx-Z8-Bw4"/>
+                <constraint firstAttribute="trailing" secondItem="M9t-P4-wWr" secondAttribute="trailing" constant="14" id="Yha-DV-Gcv"/>
+                <constraint firstItem="M9t-P4-wWr" firstAttribute="top" secondItem="p7r-0C-9sK" secondAttribute="bottom" constant="8" id="bB2-y6-9kg"/>
+                <constraint firstItem="p7r-0C-9sK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="39" id="cFk-rq-h18"/>
+                <constraint firstItem="M9t-P4-wWr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="fvv-gK-EDg"/>
+                <constraint firstAttribute="trailing" secondItem="p7r-0C-9sK" secondAttribute="trailing" constant="39" id="jIv-VR-lmr"/>
+                <constraint firstItem="M9t-P4-wWr" firstAttribute="top" secondItem="p7r-0C-9sK" secondAttribute="bottom" constant="8" id="nWc-a7-1xN"/>
+                <constraint firstItem="qEX-uA-bNv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="128" id="rQ1-gp-Ppu"/>
+                <constraint firstAttribute="trailing" secondItem="qEX-uA-bNv" secondAttribute="trailing" constant="108" id="vXY-zI-CMQ"/>
+                <constraint firstItem="qEX-uA-bNv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="107" id="wqK-Sy-UN9"/>
+                <constraint firstItem="p7r-0C-9sK" firstAttribute="top" secondItem="qEX-uA-bNv" secondAttribute="bottom" constant="16" id="zaS-JU-r53"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="AWx-Z8-Bw4"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="Image" width="220" height="220"/>
+    </resources>
+</document>

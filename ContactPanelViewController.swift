@@ -22,7 +22,9 @@ class ContactPanelViewController: UIViewController
         
     }
     
+    // various buttons to add user
     @IBAction func addToContact(sender: UIButton) {
+        // request access to contacts
         AppDelegate.getAppDelegate().requestForAccess { (accessGranted) -> Void in
             if accessGranted {
                 self.createContact()
@@ -56,7 +58,11 @@ class ContactPanelViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    
+    // creates new contact based on name, email, and phone number read from QR code
     func createContact() {
+        
+        // prepare contact information fields
         let newContact = CNMutableContact()
         newContact.givenName = contactDetail!["fname"]!
         newContact.familyName = contactDetail!["lname"]!
@@ -66,8 +72,10 @@ class ContactPanelViewController: UIViewController
         let homeEmail = CNLabeledValue(label: CNLabelHome, value: contactDetail!["email"]!)
         newContact.emailAddresses = [homeEmail]
         
+        // alert user
         AppDelegate.getAppDelegate().showMessage("Create new CNMutableContact Succeeded")
         
+        // save contact to phone
         do {
             let saveRequest = CNSaveRequest()
             saveRequest.addContact(newContact, toContainerWithIdentifier: nil)
@@ -75,12 +83,15 @@ class ContactPanelViewController: UIViewController
             
             navigationController?.popViewControllerAnimated(true)
         }
+        // otherwise alert error
         catch {
             AppDelegate.getAppDelegate().showMessage("Unable to save the new contact.")
         }
         
     }
     
+    
+    // adds user to facebook by opening facebook app
     func addFBFriend(fbID : String){
         
         let fbAccess = "fb://profile/" + fbID
@@ -117,16 +128,21 @@ class ContactPanelViewController: UIViewController
         
     }
     
+    // adds user to Snapchat by copying handle to clipboard and opening app
     func addToSnapchat(snapchatID : String){
         
         let snapchatAccess = "ha://?u=" + snapchatID
-        
-        
         
         if let snapchatURL = NSURL(string: snapchatAccess)
         {
             if UIApplication.sharedApplication().canOpenURL(snapchatURL)
             {
+                // copy handle to clipboard
+                UIPasteboard.generalPasteboard().string = snapchatID
+                // alert user that handle is copied
+                AppDelegate.getAppDelegate().showMessage("Snapchat handle copied to clipboard")
+ 
+                // open Snapchat
                 UIApplication.sharedApplication().openURL(snapchatURL)
                 
             } else {

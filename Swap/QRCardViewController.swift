@@ -57,10 +57,12 @@ class QRCardViewController : UIViewController
     func createQRCode(){
         if qrcodeImage == nil {
             
+            // create string to store in QR code, in format of JSON object
             var jsonString : String = "{"
             
             jsonString += "\"check\":\"Synqr\","
             
+            // concatonate based on string
             for (var i = 0; i < content!.count; i++)
             {
                 jsonString += "\""

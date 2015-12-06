@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import AudioToolbox
 
 class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
 
@@ -26,6 +27,7 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -118,6 +120,8 @@ class FirstViewController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
                     if let checkField = json["check"].string{
                         if (checkField == "Synqr")
                         {
+                            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                            
                             for(type, content) in json {
                                 contactDetail![type] = content.string
                             }

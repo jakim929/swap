@@ -5,12 +5,12 @@
 //  Created by Walker Jordan on 11/27/15.
 //  Copyright © 2015 James Kim. All rights reserved.
 //
-/*
+
 import UIKit
 
 class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
-
-    var cardVC : Firs?;
+    
+    var infodict : NSDictionary!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,8 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginView.center = self.view.center
         loginView.readPermissions = ["public_profile", "email", "user_friends"]
         loginView.delegate = self
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,9 +34,7 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
-        
-        
-        
+
         if ((error) != nil)
         {
             // Process error
@@ -77,12 +77,85 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
                 
                 // User is already logged in, do work such as go to next view controller.
                 self.dismissViewControllerAnimated(false) { () -> Void in
-                    self.cardVC?.fbUserName = userEmail as String
+                    //self.cardVC?.fbUserName = userEmail as String
                 }
             }
         })
     }
     
+    // http://ashishkakkad.com/2015/05/facebook-login-swift-language-ios-8/
+    
+    func accessFBUserData(){
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
+                if(fbloginresult.grantedPermissions.contains("email"))
+                {
+                    self.getFBUserData()
+                    fbLoginManager.logOut()
+                }
+            }
+        })
+    }
+    
+    func getFBUserData(){
+        if((FBSDKAccessToken.currentAccessToken()) != nil){
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+                if (error == nil){
+                    self.infodict = result as! NSDictionary
+                    print(result)
+                    print(self.infodict)
+                    NSLog(self.infodict.objectForKey("picture")?.objectForKey("data")?.objectForKey("url") as! String)
+                }
+            })
+        }
+    }
+    
+
+    
+    /*
+    func getFBID(){
+        FBSession.openActiveSessionWithReadPermissions(["public_profile", "email", "user_friends"] , allowLoginUI: true, completionHandler: { (session:FBSession!, state:FBSessionState, error:NSError!) -> Void in
+            if (error==nil)
+            {
+                FBRequest.requestForMe().startWithCompletionHandler({ (connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
+                    
+                    if (error==nil)
+                    {
+                        
+                        var bUserFacebookDict = result as! NSDictionary
+                        
+                        let FB_USER_ID = bUserFacebookDict["id"]! as! String
+                        
+                        // now call FB graph API to to Get username of the user.
+                        var graphProfileURL = NSURL(string: "https://graph.facebook.com/?id=\(FB_USER_ID)")
+                        
+                        
+                        var request1: NSURLRequest = NSURLRequest(URL: graphProfileURL!)
+                        var response: AutoreleasingUnsafeMutablePointer<NSURLResponse?
+                        >=nil
+                        var error: NSErrorPointer = nil
+                        var dataVal: NSData =  NSURLConnection.sendSynchronousRequest(request1, returningResponse: response, error:nil)!
+                        var err: NSError
+                        println(response)
+                        var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
+                        println("Synchronous\(jsonResult)")
+                        
+                        
+                        let FB_USER_NAME = jsonResult["username"]! as! String //finally you will get username
+                        
+                        
+                    }
+                    else
+                    {
+                        //Utility.showErrorAlert(error.description)
+                    }
+                })
+            }
+        })
+    }
+    */
 
     /*
     // MARK: - Navigation
@@ -95,4 +168,4 @@ class FBLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     */
 
 }
-*/
+

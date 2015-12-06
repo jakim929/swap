@@ -182,8 +182,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-dE-7QZ">
-                                            <rect key="frame" x="21" y="11" width="102" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-dE-7QZ">
+                                            <rect key="frame" x="112" y="11" width="102" height="21"/>
                                             <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="102" id="B7L-Wb-hVy"/>
@@ -202,6 +202,10 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dxz-6f-jgc">
+                                            <rect key="frame" x="7" y="2" width="39" height="39"/>
+                                            <animations/>
+                                        </imageView>
                                     </subviews>
                                     <animations/>
                                     <constraints>
@@ -264,10 +268,10 @@
                             <tableViewSection headerTitle="Info" id="SLq-6e-kdf">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5iq-V8-Fs4">
-                                        <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5iq-V8-Fs4" id="5E6-5x-6fD">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WZo-2D-a9d">
@@ -289,9 +293,7 @@
                             <outlet property="delegate" destination="1Jg-zp-G5r" id="UYS-tk-CS5"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="zNb-0H-5q4"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Edit" id="8CL-X2-q9U">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="GJa-gy-qoh">
                             <connections>
@@ -302,6 +304,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="textField" destination="WZo-2D-a9d" id="IiJ-Oq-HkV"/>
+                        <outlet property="typeField" destination="SLq-6e-kdf" id="uQT-h0-bhj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2o-ue-yL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -309,10 +312,10 @@
             </objects>
             <point key="canvasLocation" x="1930" y="693"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="6dc-PJ-yMg">
             <objects>
-                <viewController id="zNp-4R-Hnw" sceneMemberID="viewController">
+                <viewController id="zNp-4R-Hnw" customClass="FBLoginViewController" customModule="Swap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LHK-pe-KAM"/>
                         <viewControllerLayoutGuide type="bottom" id="dZ5-YG-XGh"/>
@@ -320,22 +323,8 @@
                     <view key="view" contentMode="scaleToFill" id="kLR-Bb-Ea4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FACEBOOK Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jif-w1-PJz">
-                                <rect key="frame" x="187" y="289" width="134" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Jif-w1-PJz" firstAttribute="leading" secondItem="kLR-Bb-Ea4" secondAttribute="leading" constant="187" id="EXk-DF-P6h"/>
-                            <constraint firstItem="Jif-w1-PJz" firstAttribute="centerY" secondItem="kLR-Bb-Ea4" secondAttribute="centerY" id="pWN-c9-yF9"/>
-                            <constraint firstItem="Jif-w1-PJz" firstAttribute="top" secondItem="LHK-pe-KAM" secondAttribute="bottom" constant="225" id="sCw-va-HVy"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jx-b4-6Pe" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -129,6 +129,9 @@ class MainTableViewController: UITableViewController {
             detailViewController.index = path?.row
             detailViewController.currentContent = content
             
+        }
+        else if segue.identifier == "fbLogin"
+        {
             
         }
         // Get the new view controller using [segue destinationViewController].

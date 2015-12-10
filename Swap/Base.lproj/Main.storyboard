@@ -158,6 +158,9 @@
                     </view>
                     <connections>
                         <outlet property="contactInfo" destination="k6V-Z3-Dj1" id="obu-mD-ZBD"/>
+                        <outlet property="facebookButton" destination="lLL-m4-dQf" id="Aev-3N-KMq"/>
+                        <outlet property="instagramButton" destination="Cqd-aR-1JV" id="TnP-FV-UXH"/>
+                        <outlet property="snapchatButton" destination="MaR-7Y-xNf" id="qAy-rO-usX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="spu-5q-KsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -221,6 +224,7 @@
                                 <connections>
                                     <outlet property="categoryLabel" destination="VlS-dE-7QZ" id="N9T-XB-bxE"/>
                                     <outlet property="contentLabel" destination="ITK-dq-w94" id="tz4-Rj-OjA"/>
+                                    <outlet property="iconImage" destination="dxz-6f-jgc" id="xx0-L4-tJ5"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -304,7 +308,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="textField" destination="WZo-2D-a9d" id="IiJ-Oq-HkV"/>
-                        <outlet property="typeField" destination="SLq-6e-kdf" id="uQT-h0-bhj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2o-ue-yL4" userLabel="First Responder" sceneMemberID="firstResponder"/>

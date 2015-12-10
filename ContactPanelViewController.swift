@@ -16,6 +16,9 @@ class ContactPanelViewController: UIViewController
 
     var contactDetail:[String : String]?
 
+    @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var instagramButton: UIButton!
+    @IBOutlet weak var snapchatButton: UIButton!
     @IBOutlet weak var contactInfo: UILabel!
     @IBAction func returnButton(sender: UIButton) {
         
@@ -28,10 +31,10 @@ class ContactPanelViewController: UIViewController
         AppDelegate.getAppDelegate().requestForAccess { (accessGranted) -> Void in
             if accessGranted {
                 self.createContact()
-                
             }
         }
     }
+    
     @IBAction func addSnapchat(sender: AnyObject) {
         addToSnapchat(contactDetail!["snapchat"]!)
     }
@@ -51,6 +54,23 @@ class ContactPanelViewController: UIViewController
         self.contactInfo.text = contactDetail!["fname"]! + " " + contactDetail!["lname"]!
         
 
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if contactDetail!["snapchat"] == nil
+        {
+            snapchatButton.hidden = true
+        }
+        if contactDetail!["instagram"] == nil
+        {
+            instagramButton.hidden = true
+        }
+        if contactDetail!["facebook"] == nil
+        {
+            facebookButton.hidden = true
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,7 +93,7 @@ class ContactPanelViewController: UIViewController
         newContact.emailAddresses = [homeEmail]
         
         // alert user
-        AppDelegate.getAppDelegate().showMessage("Create new CNMutableContact Succeeded")
+        AppDelegate.getAppDelegate().showMessage("New Contact Saved!")
         
         // save contact to phone
         do {
@@ -92,6 +112,8 @@ class ContactPanelViewController: UIViewController
     
     
     // adds user to facebook by opening facebook app
+    
+    // The add friend API currently works for some users and not for others, it is apparently a known bug
     func addFBFriend(fbID : String){
         
         let fbAccess = "fb://profile/" + fbID
@@ -102,6 +124,7 @@ class ContactPanelViewController: UIViewController
             {
                 UIApplication.sharedApplication().openURL(fbURL)
                 
+                print(fbAccess)
             } else {
                 //redirect to safari because the user doesn't have Facebook
                 UIApplication.sharedApplication().openURL(NSURL(string: "http://facebook.com/" + fbID)!)

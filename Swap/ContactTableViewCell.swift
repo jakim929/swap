@@ -12,6 +12,6 @@ class ContactTableViewCell : UITableViewCell {
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
-    
+    @IBOutlet weak var iconImage: UIImageView!
     
 }

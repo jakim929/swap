@@ -59,6 +59,19 @@ class SynqrCode : NSObject, NSCoding {
         }
     }
     
+    func addValue(number : Int, value : String){
+        switch number{
+        case 0:  self.fname = value; break
+        case 1:  self.lname = value; break
+        case 2:  self.phone = value; break
+        case 3:  self.email = value; break
+        case 4:  self.facebook = value; break
+        case 5:  self.snapchat = value; break
+        case 6:  self.instagram = value; break
+        default: break
+        }
+    }
+    
     func returnArray()->[String]{
         return [unwrap(fname), unwrap(lname), unwrap(phone), unwrap(email), unwrap(facebook), unwrap(snapchat), unwrap(instagram)]
     }

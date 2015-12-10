@@ -11,9 +11,10 @@ import Foundation
 class QRCardViewController : UIViewController
 {
     
-    var category: [String]?
+    var category = ["fname", "lname", "phone", "email", "facebook", "snapchat", "instagram"]
     var content: [String]?
-
+    
+    var synqrCode : SynqrCode?
 
     var qrcodeImage: CIImage!
     
@@ -23,8 +24,7 @@ class QRCardViewController : UIViewController
     @IBAction func unwindToQRCodeVC(segue: UIStoryboardSegue) {
         let sourceVC = segue.sourceViewController as! MainTableViewController
         
-        category = sourceVC.models
-        content = sourceVC.content
+        self.synqrCode = sourceVC.synqrCode
     
     }
 
@@ -32,18 +32,22 @@ class QRCardViewController : UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        synqrCode = loadSynqrCode()
         
 
     }
     
     override func viewDidAppear(animated: Bool) {
-        if (category == nil) || (content == nil)
+
+        
+        if (synqrCode?.fname == nil) || (synqrCode?.lname == nil)
         {
             statusLabel.text = "Please enter your personal data"
         }
         else
         {
             
+            content = synqrCode?.returnArray()
             statusLabel.text = "Your Synqr Code"
             createQRCode()
         }
@@ -55,7 +59,6 @@ class QRCardViewController : UIViewController
     }
 
     func createQRCode(){
-        if qrcodeImage == nil {
             
             // create string to store in QR code, in format of JSON object
             var jsonString : String = "{"
@@ -66,7 +69,7 @@ class QRCardViewController : UIViewController
             for (var i = 0; i < content!.count; i++)
             {
                 jsonString += "\""
-                jsonString += category![i]
+                jsonString += category[i]
                 jsonString += "\""
                 jsonString += ":"
                 jsonString += "\""
@@ -88,16 +91,11 @@ class QRCardViewController : UIViewController
             qrcodeImage = filter!.outputImage
             
             displayQRCodeImage()
-        }
-        else {
-            imgQRCode.image = nil
-            qrcodeImage = nil
-            
-        }
 
     }
     
     
+    // Display the QR Code after scaling it
     func displayQRCodeImage() {
         let scaleX = imgQRCode.frame.size.width / qrcodeImage.extent.size.width
         let scaleY = imgQRCode.frame.size.height / qrcodeImage.extent.size.height
@@ -107,7 +105,11 @@ class QRCardViewController : UIViewController
         imgQRCode.image = UIImage(CIImage: transformedImage)
     }
     
+    // Load the synqr code from the phone to the app
     
+    func loadSynqrCode() -> SynqrCode? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(SynqrCode.ArchiveURL.path!) as? SynqrCode
+    }
     
 }
 

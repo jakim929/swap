@@ -12,14 +12,14 @@ class DetailTableViewController: UITableViewController {
     
     @IBOutlet weak var textField: UITextField!
     
-    var index:Int?
+    var currentSynqrCode : SynqrCode?
     
-    var currentContent:[String]!
+    var index:Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.text = currentContent[index!]
+        textField.text = currentSynqrCode?.returnValue(index!)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -102,15 +102,7 @@ class DetailTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "save" {
-            let destination = segue.destinationViewController as! MainTableViewController
-            if (textField != nil)
-            {
-                destination.content[index!] = textField.text!
-                
-            }
-
-        }
+        currentSynqrCode?.addValue(index!, value: textField.text!)
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
     }

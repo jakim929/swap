@@ -93,15 +93,22 @@ class MainTableViewController: UITableViewController {
             cell.contentLabel.text = ""
 
         }
-        if (indexPath.row == 3){
-            let mailIcon = "Mail Logo"
-            cell.iconImage.image = UIImage(named: mailIcon)
+        
+        if (indexPath.row == 2){
+            cell.iconImage.image = UIImage(named: "phone-logo")
         }
-        
+        if (indexPath.row == 3){
+            cell.iconImage.image = UIImage(named: "Mail Logo")
+        }
         if (indexPath.row == 4){
-        
-            let facebookIcon = "Facebook_logo_(square).png"
-            cell.iconImage.image = UIImage(named: facebookIcon)
+            cell.iconImage.image = UIImage(named: "Facebook_logo_(square)")
+        }
+        if (indexPath.row == 5){
+            cell.iconImage.image = UIImage(named: "snapchat-ghost.jpg")
+            
+        }
+        if (indexPath.row == 6){
+            cell.iconImage.image = UIImage(named: "instagram logo.jpeg")
         }
         
     

@@ -16,9 +16,18 @@ class ContactPanelViewController: UIViewController
 
     var contactDetail:[String : String]?
 
+    @IBOutlet weak var contactButton: UIButton!
+    @IBOutlet weak var contactIcon: UIButton!
+    
     @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var facebookIcon: UIButton!
+    
     @IBOutlet weak var instagramButton: UIButton!
+    @IBOutlet weak var instagramIcon: UIButton!
+    
     @IBOutlet weak var snapchatButton: UIButton!
+    @IBOutlet weak var snapchatIcon: UIButton!
+    
     @IBOutlet weak var contactInfo: UILabel!
     @IBAction func returnButton(sender: UIButton) {
         
@@ -57,18 +66,26 @@ class ContactPanelViewController: UIViewController
     }
     
     override func viewDidAppear(animated: Bool) {
-        if contactDetail!["snapchat"] == ""
+        /*if (contactDetail!["email"] == nil && contactDetail!["phone"] == nil)
+        {
+            contactButton.hidden = true
+            contactIcon.hidden = true
+        }*/
+        if contactDetail!["snapchat"] == nil
         {
             snapchatButton.hidden = true
+            snapchatIcon.hidden = true
         }
-        if contactDetail!["instagram"] == ""
+        if contactDetail!["instagram"] == nil
         {
             instagramButton.hidden = true
+            instagramIcon.hidden = true
         }
-        if contactDetail!["facebook"] == ""
+        /*if contactDetail!["facebook"] == ""
         {
             facebookButton.hidden = true
-        }
+            facebookIcon.hidden = true
+        }*/
         
         
     }

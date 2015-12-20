@@ -57,15 +57,15 @@ class ContactPanelViewController: UIViewController
     }
     
     override func viewDidAppear(animated: Bool) {
-        if contactDetail!["snapchat"] == nil
+        if contactDetail!["snapchat"] == ""
         {
             snapchatButton.hidden = true
         }
-        if contactDetail!["instagram"] == nil
+        if contactDetail!["instagram"] == ""
         {
             instagramButton.hidden = true
         }
-        if contactDetail!["facebook"] == nil
+        if contactDetail!["facebook"] == ""
         {
             facebookButton.hidden = true
         }

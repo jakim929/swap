@@ -59,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="723" y="-462"/>
+            <point key="canvasLocation" x="547" y="-462"/>
         </scene>
         <!--Contact Panel View Controller-->
         <scene sceneID="NlQ-XQ-Fxt">
@@ -93,18 +93,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLL-m4-dQf">
-                                <rect key="frame" x="243" y="425" width="162" height="43"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="jYV-n3-whT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Friend"/>
-                                <connections>
-                                    <action selector="addFacebook:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="azV-D1-h90"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqd-aR-1JV">
                                 <rect key="frame" x="243" y="471" width="162" height="43"/>
                                 <animations/>
@@ -134,30 +122,35 @@
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="1Eg-JM-9XM"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="162" id="FY5-hU-10H"/>
-                                    <constraint firstAttribute="height" constant="43" id="WI4-Ar-yXZ"/>
+                                    <constraint firstAttribute="width" constant="162" id="FY5-hU-10H"/>
+                                    <constraint firstAttribute="height" constant="30" id="WI4-Ar-yXZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Create Contact"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Eg-JM-9XM"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="addToContact:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="PXG-0F-YO6"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="contacts-icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-hG-dXn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="contacts-icon.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-hG-dXn">
                                 <rect key="frame" x="196" y="381" width="43" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="43" id="grK-eG-qct"/>
                                     <constraint firstAttribute="height" constant="43" id="zps-jN-Syl"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Facebook_logo_(square)" translatesAutoresizingMaskIntoConstraints="NO" id="KRQ-CS-dua">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Facebook_logo_(square)" translatesAutoresizingMaskIntoConstraints="NO" id="KRQ-CS-dua">
                                 <rect key="frame" x="196" y="425" width="43" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="HdL-Pu-L7i"/>
                                     <constraint firstAttribute="width" constant="43" id="rfr-M1-9GS"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="snapchat-ghost" translatesAutoresizingMaskIntoConstraints="NO" id="kV0-Xp-Q9C">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="snapchat-ghost" translatesAutoresizingMaskIntoConstraints="NO" id="kV0-Xp-Q9C">
                                 <rect key="frame" x="196" y="517" width="43" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="qeU-Pa-0Lj"/>
@@ -167,13 +160,25 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oVa-SN-OQL">
                                 <rect key="frame" x="196" y="67" width="209" height="203"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="instagram logo" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-yk-obo">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="instagram logo" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-yk-obo">
                                 <rect key="frame" x="196" y="471" width="43" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="43" id="N9w-2l-ZcX"/>
                                     <constraint firstAttribute="height" constant="43" id="xBA-hd-fYh"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLL-m4-dQf">
+                                <rect key="frame" x="243" y="425" width="162" height="43"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jYV-n3-whT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Friend"/>
+                                <connections>
+                                    <action selector="addFacebook:" destination="Zi1-0Z-jKl" eventType="touchUpInside" id="azV-D1-h90"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,6 +197,7 @@
                             <constraint firstItem="IuZ-yk-obo" firstAttribute="top" secondItem="KRQ-CS-dua" secondAttribute="bottom" constant="3" id="YXL-PJ-V0M"/>
                             <constraint firstItem="lLL-m4-dQf" firstAttribute="top" secondItem="53r-Sv-VL9" secondAttribute="bottom" constant="3" id="ZHN-CT-oPv"/>
                             <constraint firstItem="MaR-7Y-xNf" firstAttribute="centerX" secondItem="53r-Sv-VL9" secondAttribute="centerX" id="atF-OO-f9h"/>
+                            <constraint firstItem="avq-Tl-mVb" firstAttribute="top" secondItem="kV0-Xp-Q9C" secondAttribute="bottom" constant="40" id="bGU-W5-eHc"/>
                             <constraint firstItem="53r-Sv-VL9" firstAttribute="top" secondItem="k6V-Z3-Dj1" secondAttribute="bottom" constant="8" symbolic="YES" id="bRv-oF-MZs"/>
                             <constraint firstItem="MaR-7Y-xNf" firstAttribute="leading" secondItem="kV0-Xp-Q9C" secondAttribute="trailing" constant="4" id="cwS-pE-PqR"/>
                             <constraint firstItem="avq-Tl-mVb" firstAttribute="top" secondItem="MaR-7Y-xNf" secondAttribute="bottom" constant="61" id="dNd-fx-gf3"/>
@@ -202,12 +208,26 @@
                             <constraint firstItem="lLL-m4-dQf" firstAttribute="leading" secondItem="KRQ-CS-dua" secondAttribute="trailing" constant="4" id="pIx-tf-Kdr"/>
                             <constraint firstItem="Nm0-Yt-JCi" firstAttribute="leading" secondItem="qRS-LU-AaX" secondAttribute="leadingMargin" id="pmE-2B-JHH"/>
                             <constraint firstItem="53r-Sv-VL9" firstAttribute="centerX" secondItem="k6V-Z3-Dj1" secondAttribute="centerX" id="sap-oc-8gK"/>
+                            <constraint firstItem="avq-Tl-mVb" firstAttribute="top" secondItem="MaR-7Y-xNf" secondAttribute="bottom" constant="40" id="tCg-QK-BGf"/>
                             <constraint firstItem="KRQ-CS-dua" firstAttribute="top" secondItem="fiE-hG-dXn" secondAttribute="bottom" constant="3" id="u67-pr-C9b"/>
                             <constraint firstItem="k6V-Z3-Dj1" firstAttribute="top" secondItem="SNW-6g-uUz" secondAttribute="bottom" constant="167" id="uBo-p6-8cP"/>
                             <constraint firstItem="lLL-m4-dQf" firstAttribute="centerX" secondItem="Cqd-aR-1JV" secondAttribute="centerX" id="uLw-Wx-baf"/>
                             <constraint firstItem="Cqd-aR-1JV" firstAttribute="top" secondItem="lLL-m4-dQf" secondAttribute="bottom" constant="3" id="xmk-Bz-Eqr"/>
                             <constraint firstItem="k6V-Z3-Dj1" firstAttribute="centerX" secondItem="qRS-LU-AaX" secondAttribute="centerX" id="zln-dd-9d8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="uBo-p6-8cP"/>
+                                <exclude reference="0hg-7W-cpu"/>
+                                <exclude reference="ZHN-CT-oPv"/>
+                                <exclude reference="VyN-WB-led"/>
+                                <exclude reference="xmk-Bz-Eqr"/>
+                                <exclude reference="Aar-Un-kvN"/>
+                                <exclude reference="2Qi-DO-aDn"/>
+                                <exclude reference="lmJ-sg-m3i"/>
+                                <exclude reference="dNd-fx-gf3"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="contactInfo" destination="k6V-Z3-Dj1" id="obu-mD-ZBD"/>
@@ -331,7 +351,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ix-gC-UCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="89i-PI-cF5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1140" y="669"/>
+            <point key="canvasLocation" x="1490" y="345"/>
         </scene>
         <!--Edit-->
         <scene sceneID="Sc8-Js-tiT">
@@ -387,7 +407,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2o-ue-yL4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="dfa-zm-Em8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1930" y="693"/>
+            <point key="canvasLocation" x="2354" y="345"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="6dc-PJ-yMg">
@@ -406,7 +426,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jx-b4-6Pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1939" y="1445"/>
+            <point key="canvasLocation" x="1490" y="1281"/>
         </scene>
         <!--Card-->
         <scene sceneID="zhc-fO-08d">
@@ -435,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9z-jf-y7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="1845"/>
+            <point key="canvasLocation" x="547" y="1281"/>
         </scene>
         <!--Display-->
         <scene sceneID="NwE-WS-dha">
@@ -482,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0h-x8-kWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2964" y="178"/>
+            <point key="canvasLocation" x="2354" y="-462"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -502,7 +522,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-156" y="-128"/>
+            <point key="canvasLocation" x="-371" y="-462"/>
         </scene>
         <!--Card-->
         <scene sceneID="xcF-I3-lDB">
@@ -564,7 +584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wbf-Jn-iJL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="655"/>
+            <point key="canvasLocation" x="-371" y="345"/>
         </scene>
         <!--Card-->
         <scene sceneID="XuE-bv-cqY">
@@ -584,7 +604,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1N-Bo-aik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="669"/>
+            <point key="canvasLocation" x="547" y="345"/>
         </scene>
     </scenes>
     <resources>
